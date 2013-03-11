@@ -25,11 +25,11 @@
             		<li class="dropdown">
 	              	  	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Sales Reports <b class="caret"></b></a>
 						<ul class="dropdown-menu">
+							<li><a href="${createLink(action: 'list', controller: 'sales' )}">Daily</a></li>
+							<li class="divider"></li>
 							<li><a href="${createLink(action: 'list', controller: 'sales' )}">Weekly</a></li>
 							<li class="divider"></li>
 							<li><a href="${createLink(action: 'list', controller: 'sales' )}">Monthly</a></li>
-							<li class="divider"></li>
-							<li><a href="${createLink(action: 'list', controller: 'sales' )}">Yearly</a></li>
 						</ul>
             		</li>
 					<li class="active"><a href="http://localhost:8080/lsms/resources/list">Inventory</a></li>

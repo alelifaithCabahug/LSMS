@@ -1,5 +1,5 @@
-
 <%@ page import="lsms.Crew" %>
+
 <!doctype html>
 <html>
 	<head>
@@ -7,8 +7,13 @@
 		<g:set var="entityName" value="${message(code: 'crew.label', default: 'Crew')}" />
 		<title><g:message code="default.show.label" args="[entityName]" /></title>
 	</head>
+	
 	<body>
-		<!-- <a href="#show-crew" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
+	
+	<!-- CREW INFORMATION -->
+	
+		<!-- <a href="#show-crew" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a> -->
+		
 		<div class="nav" role="navigation">
 			<ul>
 				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
@@ -16,17 +21,17 @@
 				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
 			</ul>
 		</div>
-		<div id="show-crew" class="content scaffold-show" role="main">
+		
+		  <div id="show-crew" class="content scaffold-show" role="main">
 			<h1><g:message code="default.show.label" args="[entityName]" /></h1>
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
-			</g:if> -->
+			</g:if> 
 			<ol class="property-list crew">
 			
 				<g:if test="${crewInstance?.lastName}">
 				<li class="fieldcontain">
 					<span id="lastName-label" class="property-label"><g:message code="crew.lastName.label" default="Last Name" /></span>
-					
 						<span class="property-value" aria-labelledby="lastName-label"><g:fieldValue bean="${crewInstance}" field="lastName"/></span>
 					
 				</li>

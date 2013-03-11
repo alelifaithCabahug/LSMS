@@ -31,7 +31,7 @@
 				</thead>
 				<tbody>
 				<g:each in="${customPackageInstanceList}" status="i" var="customPackageInstance">
-					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+					<tr class="info ${(i % 2) == 0 ? 'even' : 'odd'}">
 					
 						<td><g:link action="show" id="${customPackageInstance.id}">${fieldValue(bean: customPackageInstance, field: "packageName")}</g:link></td>
 					
