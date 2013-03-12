@@ -25,6 +25,15 @@ class CustomerController {
             render(view: "create", model: [customerInstance: customerInstance])
             return
         }
+		
+		if(customerInstance.email){
+		sendMail {     
+		  to "${customerInstance.email}"     
+		 subject "Laundry Service Management System"     
+		 html 'HELLO!<b> Your laundry is now DONE! <b>' + 
+			'</b> <br>You can now get your clothes.<b>'+ '</b> <br>THANK YOU!!.<b>'
+		}
+		}
 
 		flash.message = message(code: 'default.created.message', args: [message(code: 'customer.label', default: 'Customer'), customerInstance.id])
         redirect(action: "show", id: customerInstance.id)
@@ -100,4 +109,24 @@ class CustomerController {
             redirect(action: "show", id: params.id)
         }
     }
+	
+	def searchableService
+		def searchCustomer(){
+		def customerId = params.customerId
+		
+		if(customerId){
+			def srchResults = searchableService.search(customerId)
+			def results = srchResults.results
+			if(results)
+			render(view: "show", model: [customerInstanceList: results])	
+			else{
+				flash.message = message(code: 'no.customer.found')
+				redirect(action:"list")
+			}
+		}else{
+			flash.message = message(code: 'empty.params')
+			redirect(action:"list")
+			}
+	}
+	
 }

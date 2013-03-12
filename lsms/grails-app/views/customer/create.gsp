@@ -6,7 +6,16 @@
 		<g:set var="entityName" value="${message(code: 'customer.label', default: 'Customer')}" />
 		<title><g:message code="default.create.label" args="[entityName]" /></title>
 	</head>
-	
+	<body>
+	<a href="#create-customer" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
+				<div align="right">	
+					<fieldset class="buttons">
+					<g:form action="searchCustomer" controller="customer" class="">
+					<g:textField name="lastname" value="${params.input}" size="20" placeholder="Search Customer"/>
+					<g:submitButton name="search" class="buttons" value="Search" />
+					</g:form>
+					</fieldset>
+		</div>
 	<div class="container-fluid">
   <div class="row-fluid">
     <div class="span2">
@@ -37,4 +46,5 @@
 		</div>
 	 </div>
   </div>
+  </body>
 </html>

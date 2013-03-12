@@ -13369,3 +13369,142 @@ Caused by: groovy.lang.MissingMethodException: No signature of method: lsms.Pack
 Possible solutions: print(java.io.PrintWriter), print(java.lang.Object), println(), println(java.lang.Object), printf(java.lang.String, java.lang.Object), println(java.io.PrintWriter)
 	at lsms.Package$__clinit__closure1.doCall(Package.groovy:10)
 	... 4 more
+2013-03-13 06:59:30,478 [http-bio-8080-exec-9] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+C:\Users\Aleli\Documents\csc183\march13\LSMS\lsms\grails-app\controllers\lsms\CustomerController.groovy: 34: expecting '}', found '+' @ line 34, column 47.
+    can now get your clothes.<b>'+ </b> <br
+                                 ^
+
+1 error
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
+	at org.codehaus.groovy.control.ErrorCollector.addFatalError(ErrorCollector.java:149)
+	at org.codehaus.groovy.control.ErrorCollector.addError(ErrorCollector.java:119)
+	at org.codehaus.groovy.control.ErrorCollector.addError(ErrorCollector.java:131)
+	at org.codehaus.groovy.control.SourceUnit.addError(SourceUnit.java:359)
+	at org.codehaus.groovy.antlr.AntlrParserPlugin.transformCSTIntoAST(AntlrParserPlugin.java:142)
+	at org.codehaus.groovy.antlr.AntlrParserPlugin.parseCST(AntlrParserPlugin.java:108)
+	at org.codehaus.groovy.control.SourceUnit.parse(SourceUnit.java:236)
+	at org.codehaus.groovy.control.CompilationUnit$1.call(CompilationUnit.java:162)
+	at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:903)
+	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:566)
+	at org.codehaus.groovy.control.CompilationUnit.processPhaseOperations(CompilationUnit.java:542)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:519)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:498)
+	at org.codehaus.groovy.tools.FileSystemCompiler.compile(FileSystemCompiler.java:55)
+	at org.codehaus.groovy.tools.FileSystemCompiler.doCompilation(FileSystemCompiler.java:210)
+	at org.codehaus.groovy.ant.Groovyc.runCompiler(Groovyc.java:1078)
+	at org.codehaus.groovy.ant.Groovyc.compile(Groovyc.java:1129)
+	at org.codehaus.groovy.grails.compiler.Grailsc.compile(Grailsc.java:79)
+	at org.codehaus.groovy.ant.Groovyc.execute(Groovyc.java:748)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:291)
+	at sun.reflect.GeneratedMethodAccessor77.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1249)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at groovy.util.AntBuilder.performTask(AntBuilder.java:260)
+	at groovy.util.AntBuilder.nodeCompleted(AntBuilder.java:220)
+	at groovy.util.BuilderSupport.doInvokeMethod(BuilderSupport.java:147)
+	at groovy.util.AntBuilder.doInvokeMethod(AntBuilder.java:170)
+	at groovy.util.BuilderSupport.invokeMethod(BuilderSupport.java:64)
+	at org.codehaus.gant.GantBuilder.invokeMethod(GantBuilder.java:99)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:120)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectCompiler.compile(GrailsProjectCompiler.groovy:268)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectCompiler$compile$0.callCurrent(Unknown Source)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectCompiler.compile(GrailsProjectCompiler.groovy:238)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectCompiler.compileAll(GrailsProjectCompiler.groovy:230)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectWatcher.compileIfSource(GrailsProjectWatcher.java:273)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectWatcher.access$300(GrailsProjectWatcher.java:46)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectWatcher$1.onChange(GrailsProjectWatcher.java:153)
+	at org.codehaus.groovy.grails.compiler.DirectoryWatcher.fireOnChange(DirectoryWatcher.java:175)
+	at org.codehaus.groovy.grails.compiler.DirectoryWatcher.run(DirectoryWatcher.java:157)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectWatcher.run(GrailsProjectWatcher.java:178)
+2013-03-13 06:59:30,504 [http-bio-8080-exec-9] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+C:\Users\Aleli\Documents\csc183\march13\LSMS\lsms\grails-app\controllers\lsms\CustomerController.groovy: 34: expecting '}', found '+' @ line 34, column 47.
+    can now get your clothes.<b>'+ </b> <br
+                                 ^
+
+1 error
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
+	at org.codehaus.groovy.control.ErrorCollector.addFatalError(ErrorCollector.java:149)
+	at org.codehaus.groovy.control.ErrorCollector.addError(ErrorCollector.java:119)
+	at org.codehaus.groovy.control.ErrorCollector.addError(ErrorCollector.java:131)
+	at org.codehaus.groovy.control.SourceUnit.addError(SourceUnit.java:359)
+	at org.codehaus.groovy.antlr.AntlrParserPlugin.transformCSTIntoAST(AntlrParserPlugin.java:142)
+	at org.codehaus.groovy.antlr.AntlrParserPlugin.parseCST(AntlrParserPlugin.java:108)
+	at org.codehaus.groovy.control.SourceUnit.parse(SourceUnit.java:236)
+	at org.codehaus.groovy.control.CompilationUnit$1.call(CompilationUnit.java:162)
+	at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:903)
+	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:566)
+	at org.codehaus.groovy.control.CompilationUnit.processPhaseOperations(CompilationUnit.java:542)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:519)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:498)
+	at org.codehaus.groovy.tools.FileSystemCompiler.compile(FileSystemCompiler.java:55)
+	at org.codehaus.groovy.tools.FileSystemCompiler.doCompilation(FileSystemCompiler.java:210)
+	at org.codehaus.groovy.ant.Groovyc.runCompiler(Groovyc.java:1078)
+	at org.codehaus.groovy.ant.Groovyc.compile(Groovyc.java:1129)
+	at org.codehaus.groovy.ant.Groovyc.execute(Groovyc.java:748)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:291)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+2013-03-13 06:59:30,581 [http-bio-8080-exec-9] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+C:\Users\Aleli\Documents\csc183\march13\LSMS\lsms\grails-app\controllers\lsms\CustomerController.groovy: 34: expecting '}', found '+' @ line 34, column 47.
+    can now get your clothes.<b>'+ </b> <br
+                                 ^
+
+1 error
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
+	at org.codehaus.groovy.control.ErrorCollector.addFatalError(ErrorCollector.java:149)
+	at org.codehaus.groovy.control.ErrorCollector.addError(ErrorCollector.java:119)
+	at org.codehaus.groovy.control.ErrorCollector.addError(ErrorCollector.java:131)
+	at org.codehaus.groovy.control.SourceUnit.addError(SourceUnit.java:359)
+	at org.codehaus.groovy.antlr.AntlrParserPlugin.transformCSTIntoAST(AntlrParserPlugin.java:142)
+	at org.codehaus.groovy.antlr.AntlrParserPlugin.parseCST(AntlrParserPlugin.java:108)
+	at org.codehaus.groovy.control.SourceUnit.parse(SourceUnit.java:236)
+	at org.codehaus.groovy.control.CompilationUnit$1.call(CompilationUnit.java:162)
+	at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:903)
+	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:566)
+	at org.codehaus.groovy.control.CompilationUnit.processPhaseOperations(CompilationUnit.java:542)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:519)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:498)
+	at org.codehaus.groovy.tools.FileSystemCompiler.compile(FileSystemCompiler.java:55)
+	at org.codehaus.groovy.tools.FileSystemCompiler.doCompilation(FileSystemCompiler.java:210)
+	at org.codehaus.groovy.ant.Groovyc.runCompiler(Groovyc.java:1078)
+	at org.codehaus.groovy.ant.Groovyc.compile(Groovyc.java:1129)
+	at org.codehaus.groovy.ant.Groovyc.execute(Groovyc.java:748)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:291)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+2013-03-13 06:59:30,581 [http-bio-8080-exec-9] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+C:\Users\Aleli\Documents\csc183\march13\LSMS\lsms\grails-app\controllers\lsms\CustomerController.groovy: 34: expecting '}', found '+' @ line 34, column 47.
+    can now get your clothes.<b>'+ </b> <br
+                                 ^
+
+1 error
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
+	at org.codehaus.groovy.control.ErrorCollector.addFatalError(ErrorCollector.java:149)
+	at org.codehaus.groovy.control.ErrorCollector.addError(ErrorCollector.java:119)
+	at org.codehaus.groovy.control.ErrorCollector.addError(ErrorCollector.java:131)
+	at org.codehaus.groovy.control.SourceUnit.addError(SourceUnit.java:359)
+	at org.codehaus.groovy.antlr.AntlrParserPlugin.transformCSTIntoAST(AntlrParserPlugin.java:142)
+	at org.codehaus.groovy.antlr.AntlrParserPlugin.parseCST(AntlrParserPlugin.java:108)
+	at org.codehaus.groovy.control.SourceUnit.parse(SourceUnit.java:236)
+	at org.codehaus.groovy.control.CompilationUnit$1.call(CompilationUnit.java:162)
+	at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:903)
+	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:566)
+	at org.codehaus.groovy.control.CompilationUnit.processPhaseOperations(CompilationUnit.java:542)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:519)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:498)
+	at org.codehaus.groovy.tools.FileSystemCompiler.compile(FileSystemCompiler.java:55)
+	at org.codehaus.groovy.tools.FileSystemCompiler.doCompilation(FileSystemCompiler.java:210)
+	at org.codehaus.groovy.ant.Groovyc.runCompiler(Groovyc.java:1078)
+	at org.codehaus.groovy.ant.Groovyc.compile(Groovyc.java:1129)
+	at org.codehaus.groovy.ant.Groovyc.execute(Groovyc.java:748)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:291)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
