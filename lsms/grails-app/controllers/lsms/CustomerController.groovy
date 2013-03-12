@@ -111,21 +111,21 @@ class CustomerController {
     }
 	
 	def searchableService
-		def searchCustomer(){
+	def searchCustomer(){
 		def customerId = params.customerId
 		
 		if(customerId){
 			def srchResults = searchableService.search(customerId)
 			def results = srchResults.results
 			if(results)
-			render(view: "show", model: [customerInstanceList: results])	
+			render(view: "list", model: [customerInstanceList: results, customerInstanceTotal: results.size()])	
 			else{
 				flash.message = message(code: 'no.customer.found')
 				redirect(action:"list")
 			}
 		}else{
-			flash.message = message(code: 'empty.params')
-			redirect(action:"list")
+				flash.message = message(code: 'empty.params')
+				redirect(action:"list")
 			}
 	}
 	
