@@ -11,10 +11,10 @@
 	
 	<a href="#show-customer" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 				<div align="right">	
-					<fieldset class="buttons">
+					<fieldset class="button">
 					<g:form action="searchCustomer" controller="customer" class="">
 					<g:textField name="lastname" value="${params.input}" size="20" placeholder="Search Customer"/>
-					<g:submitButton name="search" class="buttons" value="Search" />
+					<g:submitButton name="search" class="button" value="Search" />
 					</g:form>
 					</fieldset>
 		</div>

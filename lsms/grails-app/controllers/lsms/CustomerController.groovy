@@ -25,18 +25,8 @@ class CustomerController {
             render(view: "create", model: [customerInstance: customerInstance])
             return
         }
-		
-		if(customerInstance.email){
-		sendMail {     
-		  to "${customerInstance.email}"     
-		 subject "Laundry Service Management System"     
-		 html 'HELLO!<b> Your laundry is now DONE! <b>' + 
-			'</b> <br>You can now get your clothes.<b>'+ '</b> <br>THANK YOU!!.<b>'
-		}
-		}
-
 		flash.message = message(code: 'default.created.message', args: [message(code: 'customer.label', default: 'Customer'), customerInstance.id])
-        redirect(action: "show", id: customerInstance.id)
+		redirect(action: "show", id: customerInstance.id)	
     }
 
     def show() {
@@ -89,6 +79,8 @@ class CustomerController {
 
 		flash.message = message(code: 'default.updated.message', args: [message(code: 'customer.label', default: 'Customer'), customerInstance.id])
         redirect(action: "show", id: customerInstance.id)
+		
+		
     }
 
     def delete() {
@@ -110,12 +102,29 @@ class CustomerController {
         }
     }
 	
+	def laundryMail(){
+		def customerInstance = Customer.get(params.id)
+		
+		if(customerInstance.email){
+		sendMail {     
+		  to "${customerInstance.email}"     
+		 subject "Laundry Service Management System"     
+		 html 'HELLO!<b> ' +customerInstance.firstName + ', Your laundry is now DONE! <b>' + 
+			'</b> <br>You can now get your clothes.<b>'+ '</b> <br>THANK YOU!!.<b>'
+			}
+		}
+		
+		flash.message = "EMAIL SENT!!!"
+		redirect(action:"show", id:customerInstance.id)
+	
+	}
+	
 	def searchableService
 	def searchCustomer(){
-		def customerId = params.customerId
+		def lastName = params.lastname
 		
-		if(customerId){
-			def srchResults = searchableService.search(customerId)
+		if(lastName){
+			def srchResults = searchableService.search(lastName)
 			def results = srchResults.results
 			if(results)
 			render(view: "list", model: [customerInstanceList: results, customerInstanceTotal: results.size()])	
@@ -128,5 +137,6 @@ class CustomerController {
 				redirect(action:"list")
 			}
 	}
+	
 	
 }
