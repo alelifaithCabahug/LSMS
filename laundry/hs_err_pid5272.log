@@ -1,0 +1,194 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 262152 bytes for Chunk::new
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (allocation.cpp:317), pid=5272, tid=2484
+#
+# JRE version: 6.0_25-b06
+# Java VM: Java HotSpot(TM) Server VM (20.0-b11 mixed mode windows-x86 )
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x459fa800):  JavaThread "C2 CompilerThread0" daemon [_thread_in_native, id=2484, stack(0x45d10000,0x45d60000)]
+
+Stack: [0x45d10000,0x45d60000],  sp=0x45d5e88c,  free space=314k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x1484aa]
+V  [jvm.dll+0x1434fc]
+V  [jvm.dll+0x5e6fc]
+V  [jvm.dll+0x5e993]
+V  [jvm.dll+0x7045e]
+V  [jvm.dll+0x143ee8]
+V  [jvm.dll+0xce887]
+V  [jvm.dll+0x268ab9]
+V  [jvm.dll+0x26ae18]
+V  [jvm.dll+0x26ca8c]
+V  [jvm.dll+0x26d006]
+V  [jvm.dll+0x25f66a]
+V  [jvm.dll+0x260048]
+V  [jvm.dll+0x24e59a]
+V  [jvm.dll+0x47edd]
+V  [jvm.dll+0x48a6f]
+V  [jvm.dll+0x12dcd4]
+V  [jvm.dll+0x155a0c]
+C  [msvcr71.dll+0x9565]
+C  [kernel32.dll+0x13677]
+C  [ntdll.dll+0x39f42]
+C  [ntdll.dll+0x39f15]
+
+
+Current CompileTask:
+C2:  42887  29%     java.beans.Introspector.getTargetMethodInfo()[Ljava/beans/MethodDescriptor; @ 62 (255 bytes)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x47a7a000 JavaThread "Compass Scheduled Executor Thread [pool-6-thread-1]" daemon [_thread_blocked, id=6960, stack(0x65550000,0x655a0000)]
+  0x47a79800 JavaThread "quartzScheduler_QuartzSchedulerThread" [_thread_blocked, id=5700, stack(0x65f50000,0x65fa0000)]
+  0x47a79000 JavaThread "quartzScheduler_Worker-10" [_thread_blocked, id=1636, stack(0x65ec0000,0x65f10000)]
+  0x47a78c00 JavaThread "quartzScheduler_Worker-9" [_thread_blocked, id=7028, stack(0x65e30000,0x65e80000)]
+  0x5a958000 JavaThread "quartzScheduler_Worker-8" [_thread_blocked, id=6664, stack(0x65da0000,0x65df0000)]
+  0x5a957800 JavaThread "quartzScheduler_Worker-7" [_thread_blocked, id=4888, stack(0x65d10000,0x65d60000)]
+  0x5a957400 JavaThread "quartzScheduler_Worker-6" [_thread_blocked, id=3500, stack(0x65c80000,0x65cd0000)]
+  0x5a956c00 JavaThread "quartzScheduler_Worker-5" [_thread_blocked, id=812, stack(0x65bf0000,0x65c40000)]
+  0x5a956800 JavaThread "quartzScheduler_Worker-4" [_thread_blocked, id=7112, stack(0x65b60000,0x65bb0000)]
+  0x5a956000 JavaThread "quartzScheduler_Worker-3" [_thread_blocked, id=5416, stack(0x65ad0000,0x65b20000)]
+  0x5a955c00 JavaThread "quartzScheduler_Worker-2" [_thread_blocked, id=3524, stack(0x65a40000,0x65a90000)]
+  0x5a955400 JavaThread "quartzScheduler_Worker-1" [_thread_blocked, id=5720, stack(0x659b0000,0x65a00000)]
+  0x5a954c00 JavaThread "net.sf.ehcache.CacheManager@885a61" daemon [_thread_blocked, id=6760, stack(0x653c0000,0x65410000)]
+  0x5a953400 JavaThread "localhost-startStop-1" daemon [_thread_in_native, id=7016, stack(0x652a0000,0x652f0000)]
+  0x5a951000 JavaThread "Tomcat-startStop-1" daemon [_thread_blocked, id=6876, stack(0x48150000,0x481a0000)]
+  0x5a951c00 JavaThread "pool-2-thread-5" [_thread_blocked, id=7020, stack(0x65210000,0x65260000)]
+  0x5a951400 JavaThread "pool-2-thread-4" [_thread_blocked, id=7048, stack(0x65180000,0x651d0000)]
+  0x54100400 JavaThread "pool-2-thread-3" [_thread_blocked, id=4020, stack(0x48300000,0x48350000)]
+  0x5a35fc00 JavaThread "pool-2-thread-2" [_thread_blocked, id=1088, stack(0x48270000,0x482c0000)]
+  0x5fc00c00 JavaThread "pool-2-thread-1" [_thread_blocked, id=4028, stack(0x481e0000,0x48230000)]
+  0x4d93cc00 JavaThread "pool-1-thread-5" [_thread_blocked, id=1556, stack(0x650f0000,0x65140000)]
+  0x54060400 JavaThread "pool-1-thread-4" [_thread_blocked, id=3668, stack(0x65060000,0x650b0000)]
+  0x53125c00 JavaThread "pool-1-thread-3" [_thread_blocked, id=3520, stack(0x64fd0000,0x65020000)]
+  0x4b00dc00 JavaThread "pool-1-thread-2" [_thread_blocked, id=6836, stack(0x48430000,0x48480000)]
+  0x5c868400 JavaThread "pool-1-thread-1" [_thread_blocked, id=4744, stack(0x483a0000,0x483f0000)]
+  0x490a7c00 JavaThread "FileSystemWatcher: files=#324 cl=java.net.URLClassLoader@1c2ec05" daemon [_thread_blocked, id=4788, stack(0x64f40000,0x64f90000)]
+  0x459fc400 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=6644, stack(0x45e30000,0x45e80000)]
+  0x459fb800 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=5672, stack(0x45da0000,0x45df0000)]
+=>0x459fa800 JavaThread "C2 CompilerThread0" daemon [_thread_in_native, id=2484, stack(0x45d10000,0x45d60000)]
+  0x459d9800 JavaThread "Attach Listener" daemon [_thread_blocked, id=6432, stack(0x45c80000,0x45cd0000)]
+  0x0052fc00 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=5996, stack(0x45bf0000,0x45c40000)]
+  0x00529000 JavaThread "Finalizer" daemon [_thread_blocked, id=4540, stack(0x45960000,0x459b0000)]
+  0x00524800 JavaThread "Reference Handler" daemon [_thread_blocked, id=5388, stack(0x458d0000,0x45920000)]
+  0x0075ac00 JavaThread "main" [_thread_blocked, id=5752, stack(0x003b0000,0x00400000)]
+
+Other Threads:
+  0x00521800 VMThread [stack: 0x45840000,0x45890000] [id=5960]
+  0x45a0e800 WatcherThread [stack: 0x45ec0000,0x45f10000] [id=1124]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ PSYoungGen      total 229440K, used 67112K [0x35340000, 0x45340000, 0x45340000)
+  eden space 204800K, 22% used [0x35340000,0x3800ec68,0x41b40000)
+  from space 24640K, 86% used [0x43b30000,0x44feb4d0,0x45340000)
+  to   space 28672K, 0% used [0x41b40000,0x41b40000,0x43740000)
+ PSOldGen        total 155712K, used 84300K [0x15340000, 0x1eb50000, 0x35340000)
+  object space 155712K, 54% used [0x15340000,0x1a593150,0x1eb50000)
+ PSPermGen       total 72704K, used 58452K [0x05340000, 0x09a40000, 0x15340000)
+  object space 72704K, 80% used [0x05340000,0x08c55058,0x09a40000)
+
+Code Cache  [0x02340000, 0x028d8000, 0x05340000)
+ total_blobs=1583 nmethods=1176 adapters=360 free_code_cache=44992896 largest_free_block=149312
+
+Dynamic libraries:
+0x00400000 - 0x00424000 	C:\Program Files (x86)\Java\jdk1.6.0_25\bin\java.exe
+0x76f00000 - 0x77080000 	C:\Windows\SysWOW64\ntdll.dll
+0x75500000 - 0x75600000 	C:\Windows\syswow64\kernel32.dll
+0x76ab0000 - 0x76af6000 	C:\Windows\syswow64\KERNELBASE.dll
+0x74c50000 - 0x74cf0000 	C:\Windows\syswow64\ADVAPI32.dll
+0x74ad0000 - 0x74b7c000 	C:\Windows\syswow64\msvcrt.dll
+0x751a0000 - 0x751b9000 	C:\Windows\SysWOW64\sechost.dll
+0x74f70000 - 0x75060000 	C:\Windows\syswow64\RPCRT4.dll
+0x74a70000 - 0x74ad0000 	C:\Windows\syswow64\SspiCli.dll
+0x74a60000 - 0x74a6c000 	C:\Windows\syswow64\CRYPTBASE.dll
+0x7c340000 - 0x7c396000 	C:\Program Files (x86)\Java\jdk1.6.0_25\jre\bin\msvcr71.dll
+0x6db70000 - 0x6dfc8000 	C:\Program Files (x86)\Java\jdk1.6.0_25\jre\bin\server\jvm.dll
+0x75a60000 - 0x75b60000 	C:\Windows\syswow64\USER32.dll
+0x75cd0000 - 0x75d60000 	C:\Windows\syswow64\GDI32.dll
+0x758f0000 - 0x758fa000 	C:\Windows\syswow64\LPK.dll
+0x753c0000 - 0x7545d000 	C:\Windows\syswow64\USP10.dll
+0x74260000 - 0x74292000 	C:\Windows\system32\WINMM.dll
+0x74bf0000 - 0x74c50000 	C:\Windows\system32\IMM32.DLL
+0x75d60000 - 0x75e2c000 	C:\Windows\syswow64\MSCTF.dll
+0x73e50000 - 0x73e9b000 	C:\Windows\system32\apphelp.dll
+0x6d850000 - 0x6d85c000 	C:\Program Files (x86)\Java\jdk1.6.0_25\jre\bin\verify.dll
+0x6d3d0000 - 0x6d3ef000 	C:\Program Files (x86)\Java\jdk1.6.0_25\jre\bin\java.dll
+0x76ed0000 - 0x76ed5000 	C:\Windows\syswow64\PSAPI.DLL
+0x6d370000 - 0x6d38a000 	C:\Program Files (x86)\Java\jdk1.6.0_25\jre\bin\instrument.dll
+0x6d890000 - 0x6d89f000 	C:\Program Files (x86)\Java\jdk1.6.0_25\jre\bin\zip.dll
+0x74360000 - 0x74376000 	C:\Windows\system32\CRYPTSP.dll
+0x74320000 - 0x7435b000 	C:\Windows\system32\rsaenh.dll
+0x74300000 - 0x74317000 	C:\Windows\system32\USERENV.dll
+0x742e0000 - 0x742eb000 	C:\Windows\system32\profapi.dll
+0x6d6b0000 - 0x6d6c3000 	C:\Program Files (x86)\Java\jdk1.6.0_25\jre\bin\net.dll
+0x757d0000 - 0x75805000 	C:\Windows\syswow64\WS2_32.dll
+0x74d70000 - 0x74d76000 	C:\Windows\syswow64\NSI.dll
+0x6e040000 - 0x6e07c000 	C:\Windows\system32\mswsock.dll
+0x6e020000 - 0x6e026000 	C:\Windows\System32\wship6.dll
+0x00220000 - 0x00230000 	C:\Windows\system32\NLAapi.dll
+0x73860000 - 0x738a4000 	C:\Windows\system32\DNSAPI.dll
+0x00530000 - 0x00538000 	C:\Windows\System32\winrnr.dll
+0x00740000 - 0x00750000 	C:\Windows\system32\napinsp.dll
+0x46b90000 - 0x46ba2000 	C:\Windows\system32\pnrpnsp.dll
+0x46c20000 - 0x46c47000 	C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live\WLIDNSP.DLL
+0x75a00000 - 0x75a57000 	C:\Windows\syswow64\SHLWAPI.dll
+0x6e030000 - 0x6e035000 	C:\Windows\System32\wshtcpip.dll
+0x74000000 - 0x7401c000 	C:\Windows\system32\IPHLPAPI.DLL
+0x73ff0000 - 0x73ff7000 	C:\Windows\system32\WINNSI.DLL
+0x6d050000 - 0x6d056000 	C:\Windows\system32\rasadhlp.dll
+0x46db0000 - 0x46de8000 	C:\Windows\System32\fwpuclnt.dll
+0x46f80000 - 0x46fd4000 	C:\Users\Edmund\AppData\Local\Temp\jna1652760907578594251.dll
+0x46bb0000 - 0x46bb8000 	C:\Users\Edmund\AppData\Local\Temp\jline_.dll
+0x6d600000 - 0x6d609000 	C:\Program Files (x86)\Java\jdk1.6.0_25\jre\bin\management.dll
+
+VM Arguments:
+jvm_args: -Xmx768M -Xms64M -XX:PermSize=32m -XX:MaxPermSize=256m -Dfile.encoding=UTF-8 -javaagent:C:/grails-2.2.0/lib/org.springsource.springloaded/springloaded-core/jars/springloaded-core-1.1.1.jar -Xverify:none -Dspringloaded=profile=grails;cacheDir=C:\Users\Edmund/.grails/2.2.0/ -Dprogram.name= -Dgrails.home=C:\grails-2.2.0 -Dgrails.version=2.2.0 -Dbase.dir=. -Dtools.jar=C:\Program Files (x86)\Java\jdk1.6.0_25\lib\tools.jar -Dgroovy.starter.conf=C:\grails-2.2.0\conf\groovy-starter.conf 
+java_command: org.codehaus.groovy.grails.cli.support.GrailsStarter --main org.codehaus.groovy.grails.cli.support.GrailsStarter --conf C:\grails-2.2.0\conf\groovy-starter.conf --classpath ;.;c:\Program Files (x86)\Java\jre7\lib\ext\QTJava.zip  run-app
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files (x86)\Java\jdk1.6.0_25
+CLASSPATH=.;c:\Program Files (x86)\Java\jre7\lib\ext\QTJava.zip
+PATH=C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;C:\Program Files\Broadcom\Broadcom 802.11 Network Adapter\Driver;C:\Program Files (x86)\Java\jdk1.6.0_25\bin;C:\Program Files (x86)\Java\jdk1.6.0_25;\bin;C:\Program Files (x86)\Groovy\Groovy-1.8.6\bin;C:\grails-2.2.0\bin;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files (x86)\Mozart\bin;c:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files\MiKTeX 2.9\miktex\bin\x64\;C:\Program Files (x86)\SSH Communications Security\SSH Secure Shell
+USERNAME=Edmund
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 37 Stepping 5, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 Build 7600 
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 37 stepping 5, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, ht
+
+Memory: 4k page, physical 2874064k(306956k free), swap 5746228k(1717004k free)
+
+vm_info: Java HotSpot(TM) Server VM (20.0-b11) for windows-x86 JRE (1.6.0_25-b06), built on Apr 14 2011 00:56:15 by "java_re" with MS VC++ 7.1 (VS2003)
+
+time: Thu Mar 21 23:03:53 2013
+elapsed time: 42 seconds
+
