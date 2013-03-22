@@ -6,7 +6,8 @@
 		<g:set var="entityName" value="${message(code: 'customer.label', default: 'Customer')}" />
 		<title><g:message code="default.create.label" args="[entityName]" /></title>
 	</head>
-	
+	<body>
+
 	<div class="container-fluid">
   <div class="row-fluid">
     <div class="span2">
@@ -37,4 +38,5 @@
 		</div>
 	 </div>
   </div>
+  </body>
 </html>
